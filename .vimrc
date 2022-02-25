@@ -17,17 +17,16 @@ set foldlevelstart=99
 inoremap for<C-j> for (;;) {<CR>}<Esc>kllllli
 inoremap if<C-j> if () {<CR>}<Esc>klllli
 inoremap w<C-j> while () {<CR>}<Esc>kllllllli
-noremap n nzt8k8j
-noremap N Nzt8k8j
-inoremap <F11> <Esc>I///
-noremap <F11> I///
+noremap n nzz
+noremap N Nzz
+inoremap <F10> <Esc>I///
+noremap <F10> I///
 noremap <F12> I
 inoremap <F12> <Esc>I
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap [ []<Esc>i
 inoremap {<CR> {<CR>}<Esc>ko
-inoremap /**<Space>  /**<Space><Space>*/<Esc>hhi
 nnoremap ; :
 command RemoveSpace %s/\s\+$//e
 set list
@@ -35,6 +34,9 @@ set listchars=tab:._,trail:_
 hi SpecialKey ctermfg=DarkBlue
 syntax on
 set hlsearch
+
+" Switch line number/relative linenumberi
+nmap <F4> :set rnu!<CR>
 
 " On/Off foldcolumn
 nmap <F5> zR
