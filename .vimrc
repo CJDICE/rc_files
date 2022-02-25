@@ -37,6 +37,7 @@ set hlsearch
 
 " Switch line number/relative linenumberi
 nmap <F4> :set rnu!<CR>
+nmap <C-Home> :set rnu!<CR>
 
 " On/Off foldcolumn
 nmap <F5> zR
