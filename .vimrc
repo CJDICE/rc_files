@@ -26,7 +26,7 @@ inoremap <F12> <Esc>I
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap [ []<Esc>i
-inoremap {<CR> {<CR>}<Esc>ko
+inoremap {<Tab> {<CR>}<Esc>ko
 nnoremap ; :
 command RemoveSpace %s/\s\+$//e
 set list
