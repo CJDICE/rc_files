@@ -10,7 +10,13 @@ source ~/.cargo/env
 
 # aliases
 alias kk=ll
+alias dicker=docker
 alias git=hub
+alias gut=git
+alias checkout=co
+
+#CPU temper
+#sudo powermetrics --samplers smc |grep -i "CPU die temperature"
 
 # handle theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir go_version vcs)
