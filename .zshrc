@@ -3,6 +3,7 @@
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:/usr/local/bin
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+export LANG=en_US.UTF-8
 
 # import plugins
 source ~/.zsh_plugins.sh
@@ -15,8 +16,20 @@ alias git=hub
 alias gut=git
 alias checkout=co
 
+#extend basic command
+function mygrep() {
+	grep $1 * -rIn --color $2 $3 $4 $5 $6 $7 $8 $9
+}
+
 #CPU temper
-#sudo powermetrics --samplers smc |grep -i "CPU die temperature"
+function CPUT() {
+	sudo powermetrics --samplers smc |grep -i "CPU die temperature"
+}
+
+#delete local branch if remote branch is deleted
+function git_prune_local_branch() {
+	git fetch -p; git branch -vv | git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -t git branch -D
+}
 
 # handle theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir go_version vcs)
