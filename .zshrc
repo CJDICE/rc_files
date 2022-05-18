@@ -31,6 +31,11 @@ function git_prune_local_branch() {
 	git fetch -p; git branch -vv | git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -t git branch -D
 }
 
+#print my custom commands
+function custom_zsh_print() {
+	head -n 33 ~/.zshrc
+}
+
 # handle theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir go_version vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator history background_jobs ram load time)
