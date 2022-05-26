@@ -32,7 +32,7 @@ function git_prune_local_branch() {
 }
 
 #print my custom commands
-function custom_zsh_print() {
+function my_custom_zsh_print() {
 	head -n 33 ~/.zshrc
 }
 
