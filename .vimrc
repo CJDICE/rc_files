@@ -29,6 +29,9 @@ inoremap [ []<Esc>i
 inoremap {<Tab> {<CR>}<Esc>ko
 nnoremap ; :
 command RemoveSpace %s/\s\+$//e
+command! Wq wq
+command! WQ wq
+command! W w
 set list
 set listchars=tab:._,trail:_
 hi SpecialKey ctermfg=DarkBlue
