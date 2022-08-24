@@ -31,6 +31,11 @@ function git_prune_local_branch() {
 	git fetch -p; git branch -vv | git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -t git branch -D
 }
 
+#Stop mouse acceleration
+function stop_mouse_accele() {
+	defaults write .GlobalPreferences com.apple.mouse.scaling -1
+}
+
 #print my custom commands
 function my_custom_zsh_print() {
 	head -n 33 ~/.zshrc
@@ -90,3 +95,11 @@ POWERLEVEL9K_STATUS_ERROR_FOREGROUND='black'
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ice/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ice/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ice/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ice/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval $(thefuck --alias)
