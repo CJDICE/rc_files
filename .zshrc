@@ -44,7 +44,7 @@ function stop_mouse_accele() {
 
 #print my custom commands
 function my_custom_zsh_print() {
-	head -n 33 ~/.zshrc
+	head -n 48 ~/.zshrc
 }
 
 # handle theme
