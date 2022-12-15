@@ -15,6 +15,7 @@ alias dicker=docker
 alias git=hub
 alias gut=git
 alias checkout=co
+alias e04=fuck
 
 #extend basic command
 function mygrep() {
@@ -29,6 +30,11 @@ function CPUT() {
 #delete local branch if remote branch is deleted
 function git_prune_local_branch() {
 	git fetch -p; git branch -vv | git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -t git branch -D
+}
+
+#Check network
+function my_network_test() {
+	ping 8.8.8.8
 }
 
 #Stop mouse acceleration
