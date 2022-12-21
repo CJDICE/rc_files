@@ -23,8 +23,6 @@ inoremap <F10> <Esc>I///
 noremap <F10> I///
 noremap <F12> I
 inoremap <F12> <Esc>I
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
 inoremap [ []<Esc>i
 inoremap {<Tab> {<CR>}<Esc>ko
 nnoremap ; :
