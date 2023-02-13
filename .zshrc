@@ -27,6 +27,14 @@ function CPUT() {
 	sudo powermetrics --samplers smc |grep -i "CPU die temperature"
 }
 
+#Save a diff file before run checkout .
+function gco_clean() {
+	branch_name=$(git branch --show-current)
+	diff_file="diff_${branch_name}"
+	git diff > ${diff_file}; git checkout .
+	echo "save changes into: " $diff_file
+}
+
 #delete local branch if remote branch is deleted
 function git_prune_local_branch() {
 	git fetch -p; git branch -vv | git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -t git branch -D
@@ -43,8 +51,8 @@ function stop_mouse_accele() {
 }
 
 #print my custom commands
-function my_custom_zsh_print() {
-	head -n 48 ~/.zshrc
+function show_my_custom_zsh() {
+	head -n 50 ~/.zshrc
 }
 
 # handle theme
