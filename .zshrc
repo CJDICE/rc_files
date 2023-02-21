@@ -29,7 +29,7 @@ function CPUT() {
 
 #Save a diff file before run checkout .
 function gco_clean() {
-	branch_name=$(git branch --show-current)
+	branch_name=$(git branch --show-current | sed 's/\//_/g')
 	diff_file="diff_${branch_name}"
 	git diff > ${diff_file}; git checkout .
 	echo "save changes into: " $diff_file
