@@ -41,7 +41,7 @@ function git_prune_local_branch() {
 }
 
 #Check network
-function my_network_test() {
+function test_network() {
 	ping 8.8.8.8
 }
 
