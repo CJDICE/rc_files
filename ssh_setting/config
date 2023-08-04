@@ -1,0 +1,12 @@
+Host 192.168.50.4
+  HostName 192.168.50.4
+  IdentityFile /Users/ice/.ssh/google_compute_engine
+  User icechiu
+
+Host caetheras.asuscomm.com
+  IdentityFile /Users/ice/.ssh/google_compute_engine
+  User icechiu
+
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
