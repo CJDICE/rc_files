@@ -6,3 +6,6 @@
 
 `DefaultKeyBinding.dict` path:\
 `~/Library/KeyBindings/DefaultKeyBinding.dict`
+
+ssh config path:\
+`/User/ice/.ssh/config`
