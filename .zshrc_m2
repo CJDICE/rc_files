@@ -85,3 +85,5 @@ function stop_mouse_accele() {
 function show_my_custom_zsh() {
 	head -n 48 ~/.zshrc
 }
+
+eval $(thefuck --alias)
