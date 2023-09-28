@@ -1,0 +1,19 @@
+[alias]
+	co = checkout
+	br = branch
+	com = commit
+	st = status
+[credential]
+	helper = cache --timeout 604800
+[user]
+	email = icechiu@aetheras.io
+	name = CJDICE
+[fetch]
+	prune = true
+[commit]
+	template = /Users/ice/.gitmessage.txt
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
