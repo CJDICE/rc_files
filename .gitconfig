@@ -11,7 +11,7 @@
 [fetch]
 	prune = true
 [commit]
-	template = /Users/ice/.gitmessage.txt
+	template = /Users/ice/.gitmessage
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
